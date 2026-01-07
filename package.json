@@ -1,0 +1,33 @@
+{
+  "name": "nv-webblog68",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phatthananb66/lab4-coffee-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/phatthananb66/lab4-coffee-shop/issues"
+  },
+  "homepage": "https://github.com/phatthananb66/lab4-coffee-shop#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "mysql2": "^3.16.0",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
