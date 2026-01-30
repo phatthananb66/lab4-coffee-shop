@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // src/routes.js
 
 const CoffeeController = require('./controllers/CoffeeController')
@@ -30,3 +31,24 @@ module.exports = (app) => {
     app.post('/login', UserAuthenController.login)
     app.post('/register', UserAuthenController.register)
 }
+=======
+const DrinkController = require('./controllers/DrinkController')
+ 
+module.exports = (app) => {
+ 
+    // get all drinks
+    app.get('/drinks', DrinkController.index)
+ 
+    // get drink by id
+    app.get('/drink/:id', DrinkController.show)
+ 
+    // create drink
+    app.post('/drink', DrinkController.create)
+ 
+    // update drink
+    app.put('/drink/:id', DrinkController.update)
+ 
+    // delete drink
+    app.delete('/drink/:id', DrinkController.delete)
+}
+>>>>>>> 428c46f3a2fab43bdc494251a56ba8375d3e4b2a
