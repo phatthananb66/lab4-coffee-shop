@@ -9,6 +9,10 @@ module.exports = {
             dialect: 'sqlite',
             storage: './coffeeshop-db.sqlite',
             logging: false
-        }
+        },
+         authentication: {
+        jwtSecret: process.env.JWT_SECRET || 'secret'
+    }
+
     }
 }
