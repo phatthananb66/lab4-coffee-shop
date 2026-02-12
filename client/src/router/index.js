@@ -13,6 +13,7 @@ import MenuEdit from '../components/Menus/EditMenu.vue'
 import MenuShow from '../components/Menus/ShowMenu.vue'
 
 // ===== Coffees =====
+<<<<<<< HEAD
 import CoffeeIndex from '../components/Coffees/Index.vue'
 import CoffeeCreate from '../components/Coffees/CreateCoffee.vue'
 import CoffeeEdit from '../components/Coffees/EditCoffee.vue'
@@ -29,6 +30,12 @@ import BlogShow from '../components/Blogs/ShowBlog.vue'
 
 // ===== Login =====
 import Login from '../components/Users/Login.vue'
+=======
+import CoffeeIndex from '../components/coffees/index.vue'
+import CoffeeCreate from '../components/coffees/CreateCoffee.vue'
+import CoffeeEdit from '../components/coffees/EditCoffee.vue'
+import CoffeeShow from '../components/coffees/ShowCoffee.vue'   // ⭐ เพิ่มบรรทัดนี้
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,12 +52,20 @@ const router = createRouter({
       component: UserCreate
     },
     {
+<<<<<<< HEAD
       path: '/user/edit/:userId',
+=======
+      path: '/user/edit/:id',
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
       name: 'user-edit',
       component: UserEdit
     },
     {
+<<<<<<< HEAD
       path: '/user/:userId',
+=======
+      path: '/user/:id',
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
       name: 'user-show',
       component: UserShow
     },
@@ -94,6 +109,7 @@ const router = createRouter({
       component: CoffeeEdit
     },
     {
+<<<<<<< HEAD
       path: '/coffee/:coffeeId',
       name: 'coffee-show',
       component: CoffeeShow
@@ -133,6 +149,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: Login
+=======
+      path: '/coffee/:coffeeId',          // ⭐ เพิ่ม route ดูรายละเอียด
+      name: 'coffee-show',
+      component: CoffeeShow
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
     }
   ]
 })

@@ -11,7 +11,11 @@
 
       <p>
         Price:
+<<<<<<< HEAD
         <input v-model.number="coffee.price" type="number" />
+=======
+        <input v-model="coffee.price" type="number" />
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
       </p>
 
       <p>
@@ -23,6 +27,7 @@
         </select>
       </p>
 
+<<<<<<< HEAD
       <!-- ✅ เพิ่ม Status ตรงนี้ -->
       <p>
         Status:
@@ -32,6 +37,8 @@
         </select>
       </p>
 
+=======
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
       <p>
         Description:
         <textarea v-model="coffee.description"></textarea>
@@ -60,14 +67,28 @@ export default {
   },
 
   async created () {
+<<<<<<< HEAD
     const coffeeId = this.$route.params.coffeeId
+=======
+    // 1️⃣ ดึง coffeeId จาก URL
+    const coffeeId = this.$route.params.coffeeId
+
+    // 2️⃣ ดึงข้อมูลเดิมจาก backend
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
     this.coffee = (await CoffeesService.show(coffeeId)).data
   },
 
   methods: {
     async updateCoffee () {
       try {
+<<<<<<< HEAD
         await CoffeesService.put(this.coffee)
+=======
+        // 3️⃣ ส่งข้อมูลไปอัปเดต
+        await CoffeesService.put(this.coffee)
+
+        // 4️⃣ กลับไปหน้ารายการกาแฟ
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
         this.$router.push('/coffees')
       } catch (err) {
         console.log(err)

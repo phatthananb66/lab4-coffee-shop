@@ -2,6 +2,7 @@ const { Coffee } = require('../models')
 
 module.exports = {
 
+<<<<<<< HEAD
   // ===============================
   // ดึงรายการกาแฟทั้งหมด
   // GET /coffees
@@ -37,11 +38,21 @@ module.exports = {
   // เพิ่มเมนูกาแฟใหม่
   // POST /coffee
   // ===============================
+=======
+  // ดูรายการกาแฟทั้งหมด
+  async index (req, res) {
+    const coffees = await Coffee.findAll()
+    res.send(coffees)
+  },
+
+  // เพิ่มเมนูกาแฟใหม่
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
   async create (req, res) {
     try {
       const coffee = await Coffee.create(req.body)
       res.send(coffee)
     } catch (err) {
+<<<<<<< HEAD
       res.status(400).send(err)
     }
   },
@@ -86,4 +97,43 @@ module.exports = {
     }
   }
 
+=======
+      res.status(500).send(err)
+    }
+  },
+
+  // แก้ไขข้อมูลกาแฟ
+  async put (req, res) {
+    try {
+      await Coffee.update(req.body, {
+        where: { id: req.params.coffeeId }
+      })
+      res.send({ message: 'Coffee updated' })
+    } catch (err) {
+      res.status(500).send(err)
+    }
+  },
+
+  // ลบเมนูกาแฟ
+  async remove (req, res) {
+    try {
+      await Coffee.destroy({
+        where: { id: req.params.coffeeId }
+      })
+      res.send({ message: 'Coffee deleted' })
+    } catch (err) {
+      res.status(500).send(err)
+    }
+  },
+
+  // ดูรายละเอียดกาแฟ
+  async show (req, res) {
+    try {
+      const coffee = await Coffee.findByPk(req.params.coffeeId)
+      res.send(coffee)
+    } catch (err) {
+      res.status(500).send(err)
+    }
+  }
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
 }

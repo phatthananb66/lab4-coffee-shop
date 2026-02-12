@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
    "dependencies": {
       "bcrypt": "^5.1.1",
       "bcryptjs": "^3.0.3",
@@ -11,4 +12,24 @@
       "sequelize": "^6.37.7",
       "sqlite3": "^5.1.7"
    }
+=======
+<<<<<<< HEAD
+   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  
+=======
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+>>>>>>> 428c46f3a2fab43bdc494251a56ba8375d3e4b2a
+  }
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
 }

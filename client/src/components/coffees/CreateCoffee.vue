@@ -23,6 +23,7 @@
         </select>
       </div>
 
+<<<<<<< HEAD
       <!-- ✅ เพิ่ม status -->
       <div>
         <label>สถานะ</label><br />
@@ -33,6 +34,8 @@
         </select>
       </div>
 
+=======
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
       <div>
         <label>รายละเอียด</label><br />
         <textarea v-model="coffee.description"></textarea>
@@ -58,7 +61,10 @@ export default {
         name: '',
         price: null,
         type: '',
+<<<<<<< HEAD
         status: '',        // ✅ เพิ่มอันนี้
+=======
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
         description: ''
       }
     }

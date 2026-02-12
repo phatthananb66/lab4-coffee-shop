@@ -1,10 +1,13 @@
 <template>
   <div>
+<<<<<<< HEAD
     <!-- ⭐ ปุ่ม Logout -->
     <p>
       <button v-on:click="logout">Logout</button>
     </p>
 
+=======
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
     <h1>Get All Users</h1>
 
     <div>จำนวนผู้ใช้งาน {{ users.length }}</div>
@@ -21,7 +24,11 @@
         <div>status: {{ user.status }}</div>
         <div>type: {{ user.type }}</div>
 
+<<<<<<< HEAD
         <!-- ⭐ ปุ่มเดิมทั้งหมด -->
+=======
+        <!-- ⭐ ปุ่มตามสไลด์อาจารย์ -->
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
         <p>
           <button v-on:click="navigateTo('/user/' + user.id)">
             ดูข้อมูลผู้ใช้
@@ -31,6 +38,10 @@
             แก้ไขข้อมูล
           </button>
 
+<<<<<<< HEAD
+=======
+          <!-- ⭐ ปุ่มลบ -->
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
           <button v-on:click="deleteUser(user)">
             ลบข้อมูล
           </button>
@@ -48,7 +59,10 @@
 
 <script>
 import UsersService from '../../services/UsersService'
+<<<<<<< HEAD
 import { useAuthenStore } from '../../stores/authen'
+=======
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
 
 export default {
   data () {
@@ -66,9 +80,15 @@ export default {
       this.$router.push(route)
     },
 
+<<<<<<< HEAD
     // ⭐ ลบผู้ใช้ (ของเดิม)
     async deleteUser (user) {
       let result = confirm('Want to delete?')
+=======
+    // ⭐  ลบผู้ใช้ (ตามสไลด์)
+    async deleteUser (user) {
+      let result = confirm("Want to delete?")
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
       if (result) {
         try {
           await UsersService.delete(user)
@@ -79,6 +99,7 @@ export default {
       }
     },
 
+<<<<<<< HEAD
     // ⭐ โหลดข้อมูลใหม่ (ของเดิม)
     async refreshData () {
       this.users = (await UsersService.index()).data
@@ -92,6 +113,11 @@ export default {
       this.$router.push({
         name: 'login'
       })
+=======
+    // ⭐ โหลดข้อมูลใหม่หลังลบ
+    async refreshData () {
+      this.users = (await UsersService.index()).data
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
     }
   }
 }

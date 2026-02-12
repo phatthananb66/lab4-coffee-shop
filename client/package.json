@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "axios": "^1.13.2",
+<<<<<<< HEAD
     "pinia": "^3.0.4",
     "pinia-plugin-persistedstate": "^4.7.1",
+=======
+>>>>>>> d04cf2273d2c40046cb6ce93843f5d32e0abe2d9
     "vue": "^3.5.24",
     "vue-router": "^4.6.4"
   },
